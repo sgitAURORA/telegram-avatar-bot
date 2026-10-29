@@ -1,0 +1,62 @@
+name: avatar
+
+on:
+  schedule:
+    # BEGIN-GENERATED
+    - cron: "13 */3 * * *"   # страховка, раз в 3 часа
+    - cron: "3 3,4,5,6,7,8,9,10,11,12 * * *"   # дневные фото
+    # END-GENERATED
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Принудительно сменить аву (поставь 1)"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: avatar
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # обычный токен не может менять файлы в .github/workflows, поэтому свой (GH_PAT)
+          token: ${{ secrets.GH_PAT }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install telethon astral pillow
+
+      - name: Update Telegram profile
+        env:
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_SESSION: ${{ secrets.TG_SESSION }}
+          FORCE: ${{ github.event.inputs.force }}
+        run: python tg_avatar.py
+
+      - name: Plan schedule
+        if: always()
+        run: python tg_avatar.py plan
+
+      - name: Save state and schedule
+        if: always()
+        run: |
+          git config user.name "avatar-bot"
+          git config user.email "avatar-bot@users.noreply.github.com"
+          if [ -f state.json ]; then git add state.json; fi
+          git add .github/workflows/avatar.yml
+          if ! git diff --cached --quiet; then
+            git commit -m "update"
+            git pull --rebase
+            git push
+          fi
