@@ -1,6 +1,6 @@
 {
- "key": "night",
- "photo_id": 5454265045089984350,
+ "key": "blue_morning",
+ "photo_id": 5456334888614173577,
  "recent": [
   "night/c78913c07221fd5647851f8ed4165b54.jpg",
   "night/49960155537f49e01ca8f1de034fbdb1.jpg",
@@ -148,6 +148,7 @@
   "day/5c3d6838b8fb902bdd0358c31af1cdfe.jpg",
   "golden_evening/48e0865834fdbc664eef04e5a28be482.jpg",
   "blue_evening/4505f89fbb85804900649a205764f92a.jpg",
-  "night/2c47f2398a69dc9a3028b5108533a2c1.jpg"
+  "night/2c47f2398a69dc9a3028b5108533a2c1.jpg",
+  "blue_morning/0014efa806728c0e68fa64378f67b7b0.jpg"
  ]
 }
