@@ -1,8 +1,7 @@
 {
- "key": "blue_morning",
- "photo_id": 5208863932490130171,
+ "key": "golden_morning",
+ "photo_id": 5208810756500038682,
  "recent": [
-  "day/47d31a77e4adac1573a14937026e1795.jpg",
   "day/3fdf5d72898ff21aebaca861008acd9a.jpg",
   "day/IMG-20261029-WA0028.jpg",
   "day/92e98451a27a83358a6c939bad3e6670.jpg",
@@ -301,6 +300,7 @@
   "golden_evening/d6fa6f4c067d0e048cf4ae0875cf40ca.jpg",
   "blue_evening/ae89597d80b07995624ee8618c7733a3.jpg",
   "night/49960155537f49e01ca8f1de034fbdb1.jpg",
-  "blue_morning/eb9ff496bd0125b232d5171f1b810d97.jpg"
+  "blue_morning/eb9ff496bd0125b232d5171f1b810d97.jpg",
+  "golden_morning/02372a4e261959b9dfb504329d28ed6f.jpg"
  ]
 }
