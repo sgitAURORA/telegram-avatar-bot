@@ -1,8 +1,7 @@
 {
- "key": "golden_evening",
- "photo_id": 5213279064381137429,
+ "key": "blue_evening",
+ "photo_id": 5210666036343022577,
  "recent": [
-  "day/cdd1075e61c8a2cf615c2e5ff8c87c65.jpg",
   "day/72f56bccd32e69c531b38fd5a85db249.jpg",
   "day/33804e75083ed46311824b7b9ce9b529.jpg",
   "golden_evening/3dca78fae2764b855664e54b81060874.jpg",
@@ -301,6 +300,7 @@
   "day/bea75286fbe3e32c85cc51c49a42acad.jpg",
   "day/6848dd194b771c9c374e770d2bb25413.jpg",
   "day/e97f4c15ce9cd33995f8f8d556f0b02d.jpg",
-  "golden_evening/69480f9ce5bee573168a3daee11019cb.jpg"
+  "golden_evening/69480f9ce5bee573168a3daee11019cb.jpg",
+  "blue_evening/b698aeb69951df6b2e669e1eed66a3ec.jpg"
  ]
 }
